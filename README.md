@@ -10,4 +10,7 @@ aws ec2 describe-instances --output text --query 'Reservations[*].Instances[*].[
 
 ELB Configurations 
 aws elb describe-load-balancers --query 'LoadBalancerDescriptions[*].[LoadBalancerName, DNSName, ListenerDescriptions[*]]'
+
+for ELB, CLB, ALB
+aws elbv2 describe-load-balancers --query 'LoadBalancers[*].[LoadBalancerName, Type]' 
 ```
