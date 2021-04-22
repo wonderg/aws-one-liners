@@ -12,5 +12,6 @@ ELB Configurations
 aws elb describe-load-balancers --query 'LoadBalancerDescriptions[*].[LoadBalancerName, DNSName, ListenerDescriptions[*]]'
 
 for ELB, CLB, ALB
-aws elbv2 describe-load-balancers --query 'TargetGroups[*].[TargetGroupArn, TargetGroupName, Port]'
+aws elbv2 describe-load-balancers --query 'LoadBalancers[*].[LoadBalancerName, Type]'
+aws elbv2 describe-target-groups --query 'TargetGroups[*].[TargetGroupArn, TargetGroupName, Port]'
 ```
