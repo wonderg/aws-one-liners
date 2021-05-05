@@ -17,5 +17,8 @@ aws elbv2 describe-target-groups --query 'TargetGroups[*].[TargetGroupArn, Targe
 
 RDS
 aws rds describe-db-instances --query 'DBInstances[*].[DBInstanceIdentifier, DBInstanceClass, Engine[*]]'
-```
 
+
+Redshift
+aws redshift describe-clusters --query 'Clusters[*].[ClusterIdentifier, NodeType, NumberOfNodes]'
+```
