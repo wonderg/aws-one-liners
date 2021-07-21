@@ -21,4 +21,8 @@ aws rds describe-db-instances --query 'DBInstances[*].[DBInstanceIdentifier, DBI
 
 Redshift
 aws redshift describe-clusters --query 'Clusters[*].[ClusterIdentifier, NodeType, NumberOfNodes]'
+
+Find latest AmazonLinux2 AMI
+aws ec2 describe-images --owners amazon --filters "Name=name,Values=amzn*" --query 'sort_by(Images, &CreationDate)[].Name'
 ```
+
