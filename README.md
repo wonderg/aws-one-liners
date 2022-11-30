@@ -14,8 +14,10 @@ Oneliners for AWS CLI
 ```aws elb describe-load-balancers --query 'LoadBalancerDescriptions[*].[LoadBalancerName, DNSName, ListenerDescriptions[*]]'```
 
 ### for ELB, CLB, ALB
-```aws elbv2 describe-load-balancers --query 'LoadBalancers[*].[LoadBalancerArn, LoadBalancerName, Type]'
-aws elbv2 describe-target-groups --query 'TargetGroups[*].[TargetGroupArn, TargetGroupName, Port]'```
+```
+aws elbv2 describe-load-balancers --query 'LoadBalancers[*].[LoadBalancerArn, LoadBalancerName, Type]'
+aws elbv2 describe-target-groups --query 'TargetGroups[*].[TargetGroupArn, TargetGroupName, Port]'
+```
 
 ## RDS
 ```aws rds describe-db-instances --query 'DBInstances[*].[DBInstanceIdentifier, DBInstanceClass, Engine[*]]'```
